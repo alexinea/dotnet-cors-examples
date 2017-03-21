@@ -1,2 +1,1 @@
-# dCompany-CORS
-dCompany CORS
+# ASP.NET CORS 演示
