@@ -1,6 +1,6 @@
-# ASP.NET CORS 演示
+# ASP.NET CORS 样例
 
-#### ASP.NET CORS
+### ASP.NET CORS
 
 在 `web.config` 配置文件的 `system.webServer:httpProtocol:customHeaders` 节点下添加配置：
 
