@@ -15,7 +15,9 @@ namespace Cors.AspNetCore
             services.AddMvc();
 
             services.AddCors(options => options.AddPolicy("CorsSample",
-                p => p.WithOrigins("http://localhost:63342", "http://c.example.com").AllowAnyMethod().AllowAnyHeader()));
+                p => p.WithOrigins("http://localhost:63342", "http://c.example.com")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

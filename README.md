@@ -82,7 +82,10 @@ config.EnableCors();
 修改 `ConfigureServices`：
 
 ```
-services.AddCors(options => options.AddPolicy("CorsSample", p => p.WithOrigins("http://localhost:63342").AllowAnyMethod().AllowAnyHeader()));
+services.AddCors(options => options.AddPolicy("CorsSample",
+    p => p.WithOrigins("http://localhost:63342")
+        .AllowAnyMethod()
+        .AllowAnyHeader()));
 ```
 
 修改 `Configure`：
@@ -96,3 +99,6 @@ app.UseCors("CorsSample");
 ```
 [EnableCors("CorsSample")]
 ```
+
+推荐阅读：
++ [ASP.NET Core CORS 简单使用](http://www.cnblogs.com/xishuai/p/aspnet-core-cors.html)
