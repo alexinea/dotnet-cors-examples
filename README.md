@@ -33,6 +33,35 @@ public class AllowCrossSiteAttribute : ActionFilterAttribute
 }
 ```
 
+在控制器中使用：
+
+```
+[AllowCrossSite]
+```
+
 推荐阅读：
 + [CORS in ASP .NET MVC5](http://stackoverflow.com/questions/27218240/cors-in-asp-net-mvc5)
 + [Setting Access-Control-Allow-Origin in ASP.Net MVC - simplest possible method](http://stackoverflow.com/questions/6290053/setting-access-control-allow-origin-in-asp-net-mvc-simplest-possible-method)
+
+### ASP.NET WebAPI CORS
+
+项目：`src\Cors.AspNet.WebAPI`。
+
+引用 `Microsoft.AspNet.WebApi.Cors` 包：
+
+```
+Install-Package Microsoft.AspNet.WebApi.Cors
+```
+
+`WebApiConfig.cs` 文件：
+
+```
+config.EnableCors();
+```
+
+在控制器：
+
+```
+[EnableCors(origins: "http://localhost:63342", headers: "*", methods: "*")]
+```
+
