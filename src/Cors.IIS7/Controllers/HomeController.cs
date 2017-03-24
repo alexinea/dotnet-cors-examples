@@ -6,7 +6,7 @@ namespace Cors.IIS7.Controllers
     {
         public ActionResult Index()
         {
-            return Json("ok");
+            return Json("ok, iis7");
         }
     }
 }
