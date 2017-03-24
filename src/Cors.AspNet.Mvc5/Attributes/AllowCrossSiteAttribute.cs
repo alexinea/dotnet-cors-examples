@@ -2,7 +2,7 @@
 
 namespace Cors.AspNet.Mvc5.Attributes
 {
-    public class AllowCrossSiteJsonAttribute : ActionFilterAttribute
+    public class AllowCrossSiteAttribute : ActionFilterAttribute
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
