@@ -16,6 +16,8 @@
 + [CORS on IIS7](https://enable-cors.org/server_iis7.html)
 + [ASP.NET Configuration File Hierarchy and Inheritance](https://msdn.microsoft.com/en-us/library/ms178685.aspx)
 
+***
+
 ### ASP.NET MVC5 CORS
 
 项目：`src\Cors.AspNet.Mvc5`。
@@ -43,6 +45,8 @@ public class AllowCrossSiteAttribute : ActionFilterAttribute
 + [CORS in ASP .NET MVC5](http://stackoverflow.com/questions/27218240/cors-in-asp-net-mvc5)
 + [Setting Access-Control-Allow-Origin in ASP.Net MVC - simplest possible method](http://stackoverflow.com/questions/6290053/setting-access-control-allow-origin-in-asp-net-mvc-simplest-possible-method)
 
+***
+
 ### ASP.NET WebAPI CORS
 
 项目：`src\Cors.AspNet.WebAPI`。
@@ -65,3 +69,30 @@ config.EnableCors();
 [EnableCors(origins: "http://localhost:63342", headers: "*", methods: "*")]
 ```
 
+推荐阅读：
++ [CORS on ASP.NET](https://enable-cors.org/server_aspnet.html)
++ [WebApi 跨域问题解决方案：CORS](http://www.cnblogs.com/landeanfen/p/5177176.html)
+
+***
+
+### ASP.NET Core CORS
+
+项目：`src\Cors.AspNetCore`
+
+修改 `ConfigureServices`：
+
+```
+services.AddCors(options => options.AddPolicy("CorsSample", p => p.WithOrigins("http://localhost:63342").AllowAnyMethod().AllowAnyHeader()));
+```
+
+修改 `Configure`：
+
+```
+app.UseCors("CorsSample");
+```
+
+控制器：
+
+```
+[EnableCors("CorsSample")]
+```
